@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; /* Bir nesnenin kapladığı alan nesnenin genişliği+border+padding değerlerinin toplamıdır. */
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh; /* yüksekliğin en fazla yükseklik ve gerekirse daha fazlasını sağlar.*/
+    background:linear-gradient(rgba(0, 0, 0, 0.5),transparent)  ,url(./image/office.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Yukarıdan aşağıya doğru sıralanır. */
+}
+
+nav{
+    display: flex;
+    min-height: 8vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+nav img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul li{
+    line-height: 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.header{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    top: 50%;
+    left: 20%;
+    font-size: 3rem;
+    transform: translate(-20%,-50%);
+    list-style: none;
+}
+
+.header::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height:1rem;
+    top: 95%;
+    left: 0%;
+    padding: 1rem;
+    background-color: greenyellow;
+    animation: moveline 3s ease-in;
+}
+
+ul li{
+    align-items: center;
+    overflow: hidden;
+    line-height: 50px;
+}
+
+ul span{
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 4rem;
+    color: greenyellow;
+    transform:translateX(100%);
+}
+
+.description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50% ;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(-20%,-50%);
+}
+
+.description p{
+    opacity: 0;
+    text-align: justify;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+
+
+/* Javascript codes */
+
+@keyframes moveup {
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1; 
+        transform: translateY(0px);
+    }
+}
+
+@keyframes movetoleft{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveline{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
